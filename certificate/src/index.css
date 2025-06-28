@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+.island-moments-regular {
+  font-family: "Island Moments", cursive;
+  font-weight: 400;
+  font-style:normal;
+}

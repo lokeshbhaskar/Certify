@@ -1,0 +1,7 @@
+# Ignore environment variables
+.env
+
+# Ignore node_modules (recommended - it's huge and not needed in repo)
+node_modules/
+
+ 

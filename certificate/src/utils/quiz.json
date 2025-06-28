@@ -1,0 +1,154 @@
+{
+  "python": [
+    {
+      "id": 1,
+      "question": "What is the output of print(2 ** 3)?",
+      "options": [
+        "5",
+        "6",
+        "8",
+        "9"
+      ],
+      "answer": "8",
+      "level": "beginner"
+    },
+    {
+      "id": 2,
+      "question": "Which of the following is used to define a function in Python?",
+      "options": [
+        "func",
+        "def",
+        "function",
+        "define"
+      ],
+      "answer": "def",
+      "level": "beginner"
+    },
+    {
+      "id": 3,
+      "question": "What is the purpose of the 'self' keyword in Python classes?",
+      "options": [
+        "It defines a class",
+        "It refers to the instance",
+        "It's a global variable",
+        "None"
+      ],
+      "answer": "It refers to the instance",
+      "level": "intermediate"
+    }
+  ],
+  "javascript": [
+    {
+      "id": 1,
+      "question": "What is the output of typeof null in JavaScript?",
+      "options": [
+        "object",
+        "null",
+        "undefined",
+        "number"
+      ],
+      "answer": "object",
+      "level": "intermediate"
+    },
+    {
+      "id": 2,
+      "question": "Which method converts JSON data to a JavaScript object?",
+      "options": [
+        "JSON.convert()",
+        "JSON.parse()",
+        "JSON.stringify()",
+        "JSON.toJS()"
+      ],
+      "answer": "JSON.parse()",
+      "level": "beginner"
+    },
+    {
+      "id": 3,
+      "question": "What will be the output of 0 == '0'?",
+      "options": [
+        "true",
+        "false",
+        "error",
+        "undefined"
+      ],
+      "answer": "true",
+      "level": "beginner"
+    }
+  ],
+  "html_css": [
+    {
+      "id": 1,
+      "question": "Which tag is used to define a hyperlink in HTML?",
+      "options": [
+        "<a>",
+        "<link>",
+        "<href>",
+        "<url>"
+      ],
+      "answer": "<a>",
+      "level": "beginner"
+    },
+    {
+      "id": 2,
+      "question": "What does CSS stand for?",
+      "options": [
+        "Colorful Style Sheets",
+        "Creative Style Sheets",
+        "Cascading Style Sheets",
+        "Computer Style Sheets"
+      ],
+      "answer": "Cascading Style Sheets",
+      "level": "beginner"
+    },
+    {
+      "id": 3,
+      "question": "Which property is used to change the background color?",
+      "options": [
+        "bgcolor",
+        "background-color",
+        "color",
+        "background"
+      ],
+      "answer": "background-color",
+      "level": "beginner"
+    }
+  ],
+  "java": [
+    {
+      "id": 1,
+      "question": "Which keyword is used for inheritance in Java?",
+      "options": [
+        "implements",
+        "inherits",
+        "extends",
+        "instanceof"
+      ],
+      "answer": "extends",
+      "level": "intermediate"
+    },
+    {
+      "id": 2,
+      "question": "What is the size of int in Java?",
+      "options": [
+        "2 bytes",
+        "4 bytes",
+        "8 bytes",
+        "Depends on system"
+      ],
+      "answer": "4 bytes",
+      "level": "beginner"
+    },
+    {
+      "id": 3,
+      "question": "What is JVM?",
+      "options": [
+        "Java Variable Method",
+        "Java Virtual Machine",
+        "Java Visual Model",
+        "Java Version Manager"
+      ],
+      "answer": "Java Virtual Machine",
+      "level": "beginner"
+    }
+  ]
+}
