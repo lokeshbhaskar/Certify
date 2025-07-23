@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SubmitionForm from "./SubmitionForm";
 import { FaTasks } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import Loader from "./Loader";
 
 const InternshipPage = ({ title, tasks, themeColor }) => {
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
   const colorMap = {
     blue: "border-blue-600 text-blue-800",
     green: "border-green-500 text-green-700",
@@ -11,15 +14,27 @@ const InternshipPage = ({ title, tasks, themeColor }) => {
     yellow: "border-yellow-500 text-yellow-700",
     red: "border-red-600 text-red-700",
   };
-  const navigate = useNavigate()
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500); // 1.5 seconds loader
+    return () => clearTimeout(timer);
+  }, []);
 
   const colorClasses = colorMap[themeColor] || "border-blue-600 text-blue-800";
   const borderColor = colorClasses.split(" ")[0]; // e.g., border-blue-600
   const textColor = colorClasses.split(" ")[1]; // e.g., text-blue-800
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white p-6">
-      <div className="max-w-4xl mx-auto">
+    <div className="relative min-h-screen bg-gradient-to-br from-gray-50 to-white p-6">
+       {loading && (
+        <Loader />
+      )}
+      <div
+        className={`max-w-4xl mx-auto transition-all duration-500 ${
+          loading ? "blur-sm" : "blur-0"
+        }`}
+      >
         <div className="py-4 flex md:flex-row flex-col items-center gap-4 justify-center ">
           <h1
             className={`text-3xl font-extrabold text-center  drop-shadow-sm ${textColor}`}
