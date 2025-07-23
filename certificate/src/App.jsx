@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Mern from "./pages/certifications/Mern";
 import Python from "./pages/certifications/Python";
 import Backend from "./pages/certifications/Backend";
-import Aws from "./pages/certifications/Aws";
+import Aws from "./pages/certifications/AWS";
 import Fullstack from "./pages/certifications/Fullstack";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
