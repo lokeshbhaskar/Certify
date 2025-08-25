@@ -1,7 +1,7 @@
 import Task from "../models/Task.js";
 import User from "../models/User.js";
 
-// 🟢 1. Get all tasks for a specific user
+ 
 export const getTasksByUser = async (req, res) => {
   const { userId } = req.params;
   try {
@@ -16,7 +16,7 @@ export const getTasksByUser = async (req, res) => {
   }
 };
 
-// 🟢 2. Update task status (e.g., mark as completed)
+ 
 export const updateTaskStatus = async (req, res) => {
   const { taskId } = req.params;
   const { status } = req.body;
@@ -29,7 +29,6 @@ export const updateTaskStatus = async (req, res) => {
     );
     if (!updatedTask)
       return res.status(404).json({ message: "Task not found" });
-
     res.status(200).json(updatedTask);
   } catch (error) {
     console.error("Error updating task:", error);

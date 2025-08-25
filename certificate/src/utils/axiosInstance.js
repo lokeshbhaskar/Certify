@@ -31,13 +31,13 @@ axiosInstance.interceptors.response.use(
   (error) => {
     if (error.response) {
       const status = error.response.status;
+      console.log("status",status)
       if (status === 401) {
+        localStorage.removeItem("token");
         const currentPath = window.location.pathname;
         if (currentPath.startsWith("/admin")) {
-          // Redirect admin to admin login
           window.location.href = "/admin-login";
         } else {
-          // Regular user
           window.location.href = "/login";
         }
       } else if (error.response.status === 500) {

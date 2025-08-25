@@ -56,7 +56,7 @@ const Signup = () => {
           navigate("/");
         }
         setIsLoading(false);
-      }, 3000); // Simulate loading delay
+      }, 3000);  
     } catch (err) {
       if (err.response?.data?.message) {
         setError(err.response.data.message);

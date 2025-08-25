@@ -15,7 +15,7 @@ const Login = () => {
   const navigate = useNavigate();
   const { updateUser } = useContext(UserContext);
 
-  // 🔐 Redirect if already logged in
+  
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
@@ -55,7 +55,7 @@ const Login = () => {
           navigate("/");
         }
         setIsLoading(false);
-      }, 3000); // Simulate loading delay
+      }, 3000); 
     } catch (error) {
       if (error.response?.data?.message) {
         setError(error.response.data.message);
@@ -72,8 +72,7 @@ const Login = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "repeat",
-        // height: "100vh", // or any desired height
-        // width: "100%", // optional
+       
       }}
     >
       {/* <Navbar /> */}

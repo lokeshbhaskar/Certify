@@ -1,29 +1,20 @@
 import React from "react";
-import bgimg from "../assets/bgimg.png";
 import Navbar from "../components/layouts/Navbar";
 import Card from "../components/cards/Card";
 import Footer from "../components/Footer";
 import img1 from "../assets/img1.svg";
 import img2 from "../assets/img2.svg";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
-import QuizCard from "../components/cards/QuizCards";
+ 
 
 const Home = () => {
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-start"
-      style={{
-        backgroundImage: `url(${bgimg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "repeat",
-      }}
+      className="min-h-screen flex flex-col items-center justify-start bg-[#0f172a]"  
     >
       <section
         className=" w-[90%] md:w-[80%] lg:w-[75%] min-h-[90vh] mt-4 md:mt-8  justify-between items-center rounded-xl m-4 overflow-hidden shadow-xl pt-4"
         >
-        <Navbar />
+        <Navbar className="fixed top-0 z-50" />
         <div className="flex flex-col md:flex-row items-center justify-center min-h-[80vh] py-10 md:py-0 ">
           {/* Left side: Image */}
           <div className="w-full  flex items-center justify-center md:w-1/2 mb-8 md:mb-0">
@@ -56,10 +47,12 @@ const Home = () => {
         </div>
       </section>
       <Card />
-      {/* <QuizCard /> */}
+       
       <Footer />
     </div>
   );
 };
 
 export default Home;
+ 
+ 
