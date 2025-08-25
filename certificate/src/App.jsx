@@ -1,6 +1,6 @@
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Frontend from "./pages/certifications/Frontend";
 import Home from "./pages/Home";
-import { HashRouter, Route, Routes } from "react-router-dom";
 import Mern from "./pages/certifications/Mern";
 import Python from "./pages/certifications/Python";
 import Backend from "./pages/certifications/Backend";
