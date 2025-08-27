@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className=" text-white mt-6 p-10 ">
-      <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className=" text-white  p-10 bg-[#0f172a] ">
+      <div className="max-w-7xl mx-auto px-4 py-3 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand */}
         <div>
           <h3 className="text-xl font-bold mb-4">Certify</h3>

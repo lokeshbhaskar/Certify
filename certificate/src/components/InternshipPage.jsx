@@ -42,12 +42,7 @@ const InternshipPage = ({ title, tasks, themeColor }) => {
             🚀 {title} Virtual Internship
           </h1>
           <div className="">
-            <button
-              onClick={() => navigate("/")}
-              className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition transform duration-300 font-bold"
-            >
-              Go to Home
-            </button>
+            
           </div>
         </div>
 

@@ -19,15 +19,22 @@ const cardVariants = {
 
 const Card = () => {
   const navigate = useNavigate();
-  const handleClick = (route) => navigate(route);
-
+  // const handleClick = (route) => navigate(route);
+  const handleClick = (route) => {
+    const token = localStorage.getItem("token");
+    // console.log("token", token);
+    if (!token) {
+      navigate("/login");
+      return;
+    }
+    navigate(route);
+  };
   return (
-    <div className="pt-4">
-      <h2 className="text-center text-white text-3xl font-bold mb-8">
+    <div className="p-8 min-h-screen">
+      <h2 className="text-center text-gray-800 text-3xl font-bold mb-8">
         Explore Our Certification Projects
       </h2>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 px-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 px-6 max-w-7xl mx-auto overflow-hidden p-6">
         {certifications.map((item, index) => (
           <motion.div
             key={index}

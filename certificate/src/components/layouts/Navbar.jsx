@@ -5,14 +5,7 @@ import { FaUserCircle } from "react-icons/fa";
 import MenuModal from "../MenuModal";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/userContext";
-const courses = [
-  "Front-End",
-  "Back-End",
-  "DSA",
-  "Full Stack",
-  "Data Science",
-  "Machine Learning",
-];
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -56,7 +49,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className=" w-full  h-16 z-10 flex items-center justify-between p-4   text-white border-2 border-sky-300 rounded-lg ">
+    <header className="w-full  h-16 z-10 flex items-center justify-between p-4 text-white border-2 border-sky-300  rounded-lg bg-[#0f172a] ">
       <div className="text-xl font-bold">Certify</div>
       {/* Show nav only on md and up */}
       <nav className="hidden md:flex gap-6  ">
@@ -70,45 +63,28 @@ const Navbar = () => {
         >
           Home
         </Link>
-        <a
-          href="#"
+        <Link
+          to="/courses"
           className="relative inline-block  hover:text-orange-500
       before:absolute before:-bottom-1 before:left-0
       before:h-[2px] before:w-0 before:bg-orange-600
       before:transition-all before:duration-300
       hover:before:w-full"
-          onClick={() => setIsNavDropdown(!isNavDropdown)}
         >
           Courses
-        </a>
+        </Link>
 
-        {isNavDropdown && (
-          <div
-            className="absolute top-[7vh] mt-4 left-[42vw] -translate-x-1/2 bg-gray-300 shadow-lg rounded-2xl p-4 z-50 w-[20vw]"
-            ref={dropdownRef}
-          >
-            <ul className="space-y-2 text-center sm:text-left">
-              {courses.map((course, index) => (
-                <li key={index}>
-                  <Link className="block hover:text-black">{course}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        <a
-          href="#"
-          className="relative inline-block  hover:text-orange-500
-             before:absolute before:-bottom-1 before:left-0
-             before:h-[2px] before:w-0 before:bg-orange-600
-             before:transition-all before:duration-300
-             hover:before:w-full"
+        <Link
+          to="/pricing"
+          className="relative inline-block hover:text-orange-500 before:absolute
+          before:-bottom-1 before:left-0 before:h-[2px] before:w-0
+          before:bg-orange-600 before:transition-all before:duration-300
+          hover:before:w-full"
         >
           Pricing
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          to="/support"
           className="relative inline-block  hover:text-orange-500
              before:absolute before:-bottom-1 before:left-0
              before:h-[2px] before:w-0 before:bg-orange-600
@@ -116,9 +92,8 @@ const Navbar = () => {
              hover:before:w-full"
         >
           Support
-        </a>
+        </Link>
       </nav>
-
       {/* User section, always visible except on small screens */}
       <div className="hidden md:flex items-center">
         {user ? (

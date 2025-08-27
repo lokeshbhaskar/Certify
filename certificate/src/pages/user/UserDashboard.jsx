@@ -50,14 +50,6 @@ const UserDashboard = () => {
         <h1 className="text-xl  md:text-3xl font-bold text-blue-800  text-center">
           Welcome to Your Dashboard
         </h1>
-        <div className="">
-          <button
-            onClick={() => navigate("/")}
-            className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition transform duration-300 font-bold"
-          >
-            Go to Home
-          </button>
-        </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
